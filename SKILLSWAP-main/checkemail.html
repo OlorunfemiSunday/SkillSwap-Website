@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verify Email | Skill Swap</title>
+
+  <link rel="icon" type="image/png" href="https://res.cloudinary.com/dezoqbzim/image/upload/v1768668000/image_16_udh8fu.png">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Saira:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="font-[Inter] relative min-h-screen bg-cover bg-center" 
+      style="background-image: url('https://res.cloudinary.com/dezoqbzim/image/upload/v1769112751/SIGN_IN_hpaf3a.png');">
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black/10 backdrop-blur-[2px]"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 min-h-screen flex flex-col">
+
+    <!-- Logo -->
+    <div class="flex justify-center pt-8">
+      <img 
+        src="https://res.cloudinary.com/dezoqbzim/image/upload/v1769111476/image_15_jdtso8.png"
+        alt="Logo"
+        class="h-28 md:h-32"
+      />
+    </div>
+
+    <!-- Message Card -->
+    <div class="inline-block mx-auto mt-16 bg-white/20 backdrop-blur-md shadow-lg rounded-md p-8 text-center max-w-[640px] border border-white/30 mx-4">
+
+      <h2 class="font-semibold font-[Saira] text-[34px] mb-4 text-blue-950">
+        Check Your Email
+      </h2>
+
+      <p class="mb-6 text-gray-800 text-lg">
+        Thank you for signing up! We've sent a <strong>verification link</strong> to your email address. 
+        Please click the link to activate your account.
+      </p>
+
+      <p class="text-red-600 font-medium mb-10 bg-red-50/50 py-2 rounded">
+        Didn't receive the email? Check your spam folder.
+      </p>
+
+      <!-- Button -->
+      <a href="Signin.html" class="inline-block w-full sm:w-auto">
+        <button
+          type="button"
+          class="w-full sm:px-20 h-14 bg-blue-950 text-white rounded-md font-medium 
+                 hover:bg-blue-900 transition cursor-pointer shadow-md"
+        >
+          Back to Sign In
+        </button>
+      </a>
+
+    </div>
+  </div>
+
+</body>
+</html>

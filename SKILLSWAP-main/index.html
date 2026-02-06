@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homepage</title>
+  <link rel="icon" type="image/png" href="https://res.cloudinary.com/dezoqbzim/image/upload/v1768668000/image_16_udh8fu.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="m-0 p-0">
+
+  <!-- Hero Section Wrapper -->
+  <section class="relative w-full min-h-screen overflow-hidden">
+
+    <!-- Background Image -->
+    <img
+      src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768667383/Hero_section_ydi77m.png"
+      alt="Background Graphic"
+      class="absolute inset-0 w-full h-full object-cover -z-10"
+    />
+
+    <!-- Overlay Content -->
+    <div class="relative z-10 px-4 sm:px-6 lg:px-10 py-4 sm:py-6">
+
+      <!-- Navigation -->
+      <nav class="flex flex-col lg:flex-row items-center justify-between gap-4">
+
+        <!-- Logo -->
+        <div class="w-full lg:w-auto flex justify-center lg:justify-start">
+          <img
+            src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768668000/image_16_udh8fu.png"
+            alt="SkillSwap Logo"
+            class="h-12 sm:h-16 lg:h-20"
+          />
+        </div>
+
+        <!-- Navigation Links - Hidden on mobile, visible on desktop -->
+        <div class="hidden lg:block shadow shadow-gray-400 rounded-full px-4 xl:px-8 py-3 bg-white/80 backdrop-blur">
+          <ul class="flex gap-4 xl:gap-10 text-xs xl:text-sm font-medium">
+            <li><a href="index.html" class="hover:text-blue-700">Home</a></li>
+            <li><a href="How.html" class="hover:text-blue-700">How it works</a></li>
+            <li><a href="Explore.html" class="hover:text-blue-700">Explore</a></li>
+            <li><a href="Community.html" class="hover:text-blue-700">Community</a></li>
+            <li><a href="About.html" class="hover:text-blue-700">About Us</a></li>
+            <li><a href="Contact.html" class="hover:text-blue-700">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobileMenuBtn" class="lg:hidden absolute right-4 top-6 p-2 bg-white rounded-lg shadow">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+
+        <!-- Action Buttons -->
+        <div class="flex gap-3 sm:gap-6">
+          <button class="bg-blue-950 text-white px-3 sm:px-5 py-2 sm:py-3 rounded-lg text-sm sm:text-base">
+            <a href="Signup.html">Get Started</a> 
+          </button>
+          <button class="bg-blue-200 text-blue-900 px-3 sm:px-5 py-2 sm:py-3 rounded-lg text-sm sm:text-base">
+            <a href="Signin.html">Sign in</a>
+          </button>
+        </div>
+
+      </nav>
+
+      <!-- Mobile Navigation Menu -->
+      <div id="mobileMenu" class="hidden lg:hidden mt-4 bg-white/90 backdrop-blur rounded-lg shadow-lg p-4">
+        <ul class="flex flex-col gap-3 text-sm font-medium">
+          <li><a href="index.html" class="block py-2 hover:text-blue-700">Home</a></li>
+          <li><a href="How.html" class="block py-2 hover:text-blue-700">How it works</a></li>
+          <li><a href="Explore.html" class="block py-2 hover:text-blue-700">Explore</a></li>
+          <li><a href="Community.html" class="block py-2 hover:text-blue-700">Community</a></li>
+          <li><a href="About.html" class="block py-2 hover:text-blue-700">About Us</a></li>
+          <li><a href="Contact.html" class="block py-2 hover:text-blue-700">Contact Us</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Saas 50k+ -->
+    <div class="flex justify-center mt-6 sm:mt-10 px-4">
+      <div class="shadow flex items-center gap-2 sm:gap-4 px-3 sm:px-4 py-2 rounded-[20px] bg-white/80 backdrop-blur">
+        <button class="shadow bg-blue-950 text-white px-2 py-2 rounded-[10px] text-xs sm:text-base">
+          50K+
+        </button>
+        <p class="text-xs sm:text-sm lg:text-base">SaaS for Students, Freelancers and Junior Professionals</p>
+      </div>
+    </div>
+
+    <!-- Hero Title -->
+    <div class="text-center px-4 sm:px-6">
+      <h1 class="font-[Saira] text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-slate-900 mt-4 sm:mt-5 leading-tight">
+        Exchange skills. Build experience.<br class="hidden sm:block">
+        <span class="block sm:inline">Grow Together</span>
+      </h1>
+      <p class="mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg text-gray-700 max-w-2xl mx-auto">
+        A trusted platform where students and professionals collaborate by exchanging skills -- not money.
+      </p>
+    </div>
+
+    <!-- CTA Buttons -->
+    <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-6 sm:mt-10 justify-center px-4">
+      <a href="Signup.html" class="shadow px-6 py-3 bg-blue-950 text-white rounded-[10px] text-sm sm:text-base inline-block text-center hover-glow hover-lift">
+    Get Started
+</a>
+<a href="webpage.html" class="bg-blue-200 text-blue-900 px-5 py-3 rounded-lg text-sm sm:text-base inline-block text-center hover-glow hover-lift">
+    Explore Skills
+</a>
+    </div>
+
+    <p class="mt-10 sm:mt-20 text-center text-xs sm:text-sm lg:text-base px-4">
+      It's free and takes only few minutes to get started
+    </p>
+
+  </section>
+
+  <!-- Collaborate Section -->
+  <div class="text-center mt-8 sm:mt-10 lg:mt-16 mb-5 px-4 sm:px-6">
+    <h1 class="text-xl sm:text-2xl lg:text-3xl font-bold font-[Saira]">
+      Collaborate, Learn, and Grow Through Skill Exchange
+    </h1>
+    <p class="mt-4 text-sm sm:text-base lg:text-lg leading-relaxed max-w-5xl mx-auto">
+      Skill Swap & Collaboration Hub is a web platform that enables students, freelancers, and early-career professionals to collaborate by exchanging skills instead of money. Users create skill profiles, offer what they can do, request help they need and work together through structured, trackable collaborations. The platform emphasizes trust, professionalism, and career growth through verified profiles, collaboration tracking, messages and ratings, messaging and ratings. It helps users gain experience, build portfolios, and access support beyond their personal networks.
+    </p>
+  </div>
+
+  <!-- Skill Swap Work -->
+  <div class="text-center mb-12 sm:mb-16 lg:mb-20 px-4 sm:px-6">
+    <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 font-[Saira]">How Skill Swap Work</h3>
+    <p class="text-sm sm:text-base lg:text-lg max-w-4xl mx-auto">
+      Create a profile, offer or request skills, and collaborate with others in a structured, trusted environment - no money involved, just shared expertise and real experience
+    </p>
+  </div>
+
+  <!-- SkillSwap contents -->
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16 lg:mb-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
+
+      <!-- Create Your Profile -->
+      <div class="flex gap-4 items-start">
+        <div class="flex items-center justify-center w-10 sm:w-12 aspect-square rounded-full bg-blue-950 shrink-0">
+          <i class="fa-regular fa-user text-white text-base sm:text-lg"></i>
+        </div>
+        <div>
+          <h3 class="text-base sm:text-lg lg:text-[20px] font-semibold mb-2 font-[Saira]">Create Your Profile</h3>
+          <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+            Users sign up and set up a simple professional profile, highlighting the skills they can offer and the skills they need help with. This establishes clarity, credibility, and expectations from the start.
+          </p>
+        </div>
+      </div>
+
+      <!-- Offer or Request Skills -->
+      <div class="flex gap-4 items-start">
+        <div class="flex items-center justify-center w-10 sm:w-12 aspect-square rounded-full bg-blue-950 shrink-0">
+          <i class="fa-solid fa-tag text-white text-base sm:text-lg"></i>
+        </div>
+        <div>
+          <h3 class="text-base sm:text-lg lg:text-[20px] font-semibold mb-2 font-[Saira]">Offer or Request Skills</h3>
+          <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+            Users can post skills they are willing to share or request support in areas such as design, writing, coding, research, and more. Skills are categorized and tagged to make discovery easy and relevant.
+          </p>
+        </div>
+      </div>
+
+      <!-- Find the Right Match -->
+      <div class="flex gap-4 items-start">
+        <div class="flex items-center justify-center w-10 sm:w-12 aspect-square rounded-full bg-blue-950 shrink-0">
+          <i class="fa-regular fa-clone text-white text-base sm:text-lg"></i>
+        </div>
+        <div>
+          <h3 class="text-base sm:text-lg lg:text-[20px] font-semibold mb-2 font-[Saira]">Find the Right Match</h3>
+          <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+            Browse available skills or receive suggested matches based on skill tags and interests. Users can review profiles, ratings and past collaborations before initiating contact.
+          </p>
+        </div>
+      </div>
+
+      <!-- Collaborate with Structure -->
+      <div class="flex gap-4 items-start">
+        <div class="flex items-center justify-center w-10 sm:w-12 aspect-square rounded-full bg-blue-950 shrink-0">
+          <i class="fa-solid fa-user-group text-white text-base sm:text-lg"></i>
+        </div>
+        <div>
+          <h3 class="text-base sm:text-lg lg:text-[20px] font-semibold mb-2 font-[Saira]">Collaborate with Structure</h3>
+          <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+            Once both parties agree, the collaboration moves into a shared workspace with messaging and a collaboration tracking board. This helps keep communication clear and progress visible.
+          </p>
+        </div>
+      </div>
+
+      <!-- Complete & Give Feedback -->
+      <div class="flex gap-4 items-start">
+        <div class="flex items-center justify-center w-10 sm:w-12 aspect-square rounded-full bg-blue-950 shrink-0">
+          <i class="fa-regular fa-comments text-white text-base sm:text-lg"></i>
+        </div>
+        <div>
+          <h3 class="text-base sm:text-lg lg:text-[20px] font-semibold mb-2 font-[Saira]">Complete & Give Feedback</h3>
+          <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+            After the collaboration ends, both users provide feedbacks and ratings. This builds trust within the community and helps maintain quality across the platform.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SkillSwap in Action -->
+  <div class="text-center mt-12 sm:mt-16 lg:mt-20 px-4 sm:px-6">
+    <h2 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 font-[Saira]">Skill Swap in Action</h2>
+    <p class="text-sm sm:text-base lg:text-lg max-w-4xl mx-auto">
+      Skill Swap connects people through skill exchange - from creating a profile to collaborating and building real experience in a trusted, professional environment.
+    </p>
+  </div>
+
+  <!-- SkillSwap Video -->
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-6 sm:mt-10 mb-12 sm:mb-16">
+    <div class="relative w-full aspect-video">
+      <iframe
+        class="absolute inset-0 w-full h-full rounded-lg"
+        src="https://www.youtube.com/embed/3WF7aJZ8ue4?si=zHaYqMGeGbMASh7a"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <!-- Find the skills you need-or offer what you know -->
+  <div class="text-center mb-12 sm:mb-16 lg:mb-20 px-4 sm:px-6">
+    <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 font-[Saira]">Find the Skills You Need - or Offer What You Know</h3>
+    <p class="text-sm sm:text-base lg:text-lg max-w-4xl mx-auto">
+      Browse a wide range of professional skillsets offered by students and early-career professionals. Whether you need support on a task or want to contribute your expertise, skill swap makes collaboration accessible and practical.
+    </p>
+  </div>
+
+  <!-- Skills Grid -->
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16 lg:mb-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
+
+      <!-- Design and Creatives -->
+      <div class="flex gap-4 items-start">
+        <div class="flex items-center justify-center w-10 sm:w-12 aspect-square rounded-full bg-blue-950 shrink-0">
+          <i class="fa-solid fa-coins text-white text-base sm:text-lg"></i>
+        </div>
+        <div>
+          <h3 class="text-base sm:text-lg lg:text-[20px] font-semibold mb-2 font-[Saira]">Design and Creatives</h3>
+          <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+            Users sign up and set up a simple professional profile, highlighting the skills they can offer and the skills they need help with. This establishes clarity, credibility, and expectations from the start.
+          </p>
+        </div>
+      </div>
+
+      <!-- Data Science -->
+      <div class="flex gap-4 items-start">
+        <div class="flex items-center justify-center w-10 sm:w-12 aspect-square rounded-full bg-blue-950 shrink-0">
+          <i class="fa-solid fa-coins text-white text-base sm:text-lg"></i>
+        </div>
+        <div>
+          <h3 class="text-base sm:text-lg lg:text-[20px] font-semibold mb-2 font-[Saira]">Data Science</h3>
+          <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+            Users can post skills they are willing to share or request support in areas such as design, writing, coding, research, and more. Skills are categorized and tagged to make discovery easy and relevant.
+          </p>
+        </div>
+      </div>
+
+      <!-- Programming -->
+      <div class="flex gap-4 items-start">
+        <div class="flex items-center justify-center w-10 sm:w-12 aspect-square rounded-full bg-blue-950 shrink-0">
+          <i class="fa-solid fa-laptop-code text-white text-base sm:text-lg"></i>
+        </div>
+        <div>
+          <h3 class="text-base sm:text-lg lg:text-[20px] font-semibold mb-2 font-[Saira]">Programming</h3>
+          <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+            Browse available skills or receive suggested matches based on skill tags and interests. Users can review profiles, ratings and past collaborations before initiating contact.
+          </p>
+        </div>
+      </div>
+
+      <!-- Project Management -->
+      <div class="flex gap-4 items-start">
+        <div class="flex items-center justify-center w-10 sm:w-12 aspect-square rounded-full bg-blue-950 shrink-0">
+          <i class="fa-solid fa-sitemap text-white text-base sm:text-lg"></i>
+        </div>
+        <div>
+          <h3 class="text-base sm:text-lg lg:text-[20px] font-semibold mb-2 font-[Saira]">Project Management</h3>
+          <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+            Once both parties agree, the collaboration moves into a shared workspace with messaging and a collaboration tracking board. This helps keep communication clear and progress visible.
+          </p>
+        </div>
+      </div>
+
+      <!-- Research & Analysis -->
+      <div class="flex gap-4 items-start">
+        <div class="flex items-center justify-center w-10 sm:w-12 aspect-square rounded-full bg-blue-950 shrink-0">
+          <i class="fa-solid fa-chart-simple text-white text-base sm:text-lg"></i>
+        </div>
+        <div>
+          <h3 class="text-base sm:text-lg lg:text-[20px] font-semibold mb-2 font-[Saira]">Research & Analysis</h3>
+          <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+            After the collaboration ends, both users provide feedbacks and ratings. This builds trust within the community and helps maintain quality across the platform.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Built for Reliable -->
+  <div class="text-center mt-12 sm:mt-16 lg:mt-20 px-4 sm:px-6">
+    <h1 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 font-[Saira]">Built for Reliable and Professional Collaboration</h1>
+    <p class="text-sm sm:text-base lg:text-lg max-w-4xl mx-auto">
+      Skill Swap & Collaboration Hub is designed to help people work together with confidence. We combine clear process, accountability, and moderation to create a safe environment for skill exchange and meaningful collaboration.
+    </p>
+  </div>
+
+  <!-- Verified Users/Image Section -->
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 sm:mt-16 lg:mt-20 mb-12 sm:mb-16">
+    <div class="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
+      
+      <!-- Text Content -->
+      <div class="w-full lg:w-1/2 space-y-4 sm:space-y-6">
+        <div>
+          <h4 class="text-orange-500 font-semibold text-sm sm:text-base mb-2">
+            <i class="fa-solid fa-circle text-[8px]"></i> Verified User Profile
+          </h4>
+          <p class="text-sm sm:text-base text-gray-700">
+            Users create detailed profiles that showcase their skills, experience, and collaboration history. This helps ensure transparency and makes it easier to assess who you are working with.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-orange-500 font-semibold text-sm sm:text-base mb-2">
+            <i class="fa-solid fa-circle text-[8px]"></i> Ratings and Feedback
+          </h4>
+          <p class="text-sm sm:text-base text-gray-700">
+            After each collaboration, participants leave feedback. This builds a reputation system that rewards reliability, quality and professionalism.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-orange-500 font-semibold text-sm sm:text-base mb-2">
+            <i class="fa-solid fa-circle text-[8px]"></i> Structured Collaboration Tracking
+          </h4>
+          <p class="text-sm sm:text-base text-gray-700">
+            Every collaboration is tracked in a shared workspace, making expectations, progress, and outcomes visible to both parties.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-orange-500 font-semibold text-sm sm:text-base mb-2">
+            <i class="fa-solid fa-circle text-[8px]"></i> Secure Communication
+          </h4>
+          <p class="text-sm sm:text-base text-gray-700">
+            In-Platform messaging keeps conversations organized and helps protect user privacy during collaborations.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-orange-500 font-semibold text-sm sm:text-base mb-2">
+            <i class="fa-solid fa-circle text-[8px]"></i> Active Moderation
+          </h4>
+          <p class="text-sm sm:text-base text-gray-700">
+            Our admin team reviews reported content, manages disputes, and enforces platform guidelines to maintain quality and trust.
+          </p>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="w-full lg:w-1/2">
+        <img 
+          class="w-full h-auto max-w-md mx-auto lg:max-w-none" 
+          src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768751436/Frame_2147258771_qfndht.png" 
+          alt="Collaborate image"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- What Our Users Says -->
+  <div class="text-center mb-8 sm:mb-12 px-4 sm:px-6">
+    <h2 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 font-[Saira]">What Our Users Says</h2>
+    <p class="text-sm sm:text-base">Real stories. Real results. Here's what our users have to say.</p>
+  </div>
+
+  <!-- Testimonials Slider -->
+  <div class="relative overflow-hidden bg-[rgba(192,196,230,0.54)] py-8 sm:py-12 lg:py-16 mx-4 sm:mx-6 lg:mx-20 rounded-[5px] mb-12 sm:mb-16">
+    <div class="relative max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Left Arrow -->
+      <button
+        id="prevBtn"
+        class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-md rounded-full w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center hover:bg-gray-100 transition-colors"
+      >
+        <span class="text-xl sm:text-2xl">‹</span>
+      </button>
+
+      <!-- Slider View -->
+      <div class="overflow-hidden max-w-[280px] sm:max-w-[600px] lg:max-w-[1050px] mx-auto">
+        <div
+          id="testimonialTrack"
+          class="flex gap-4 sm:gap-6 transition-transform duration-500 ease-in-out"
+        >
+
+          <!-- Testimonial 1 -->
+          <div class="bg-white shadow-md p-4 sm:p-6 rounded-[12px] w-full min-w-[280px] sm:min-w-[320px] lg:min-w-[420px] shrink-0 flex flex-col justify-between">
+            <div>
+              <h4 class="font-semibold font-[Saira] text-base sm:text-lg mb-2 sm:mb-3">
+                Trust & Product Efficiency
+              </h4>
+              <p class="text-xs sm:text-sm leading-relaxed text-gray-700">
+                We were skeptical at first, but now it's part of our daily workflow. Productivity has gone up, and stress levels have gone down.
+              </p>
+            </div>
+            <div class="flex items-center gap-3 sm:gap-4 mt-4 sm:mt-6">
+              <img
+                src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768803021/Frame_2147225674_dnme74.png"
+                alt=""
+                class="w-8 h-8 sm:w-10 sm:h-10 rounded-full"
+              />
+              <div>
+                <h5 class="font-medium text-xs sm:text-sm">Ngozi, A.O</h5>
+                <p class="text-[10px] sm:text-xs text-gray-500">Marketing Lead, Brightpath</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="bg-white shadow-md p-4 sm:p-6 rounded-[12px] w-full min-w-[280px] sm:min-w-[320px] lg:min-w-[420px] shrink-0 flex flex-col justify-between">
+            <div>
+              <h4 class="font-semibold font-[Saira] text-base sm:text-lg mb-2 sm:mb-3">
+                Reliability That Delivers
+              </h4>
+              <p class="text-xs sm:text-sm leading-relaxed text-gray-700">
+                We didn't expect the impact to be this noticeable. Tasks are completed faster, collaboration feels smoother, and the team stays focused.
+              </p>
+            </div>
+            <div class="flex items-center gap-3 sm:gap-4 mt-4 sm:mt-6">
+              <img
+                src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768803021/Frame_2147225674_dnme74.png"
+                alt=""
+                class="w-8 h-8 sm:w-10 sm:h-10 rounded-full"
+              />
+              <div>
+                <h5 class="font-medium text-xs sm:text-sm">Adebayo S.</h5>
+                <p class="text-[10px] sm:text-xs text-gray-500">Operations Manager, NexaCore</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="bg-white shadow-md p-4 sm:p-6 rounded-[12px] w-full min-w-[280px] sm:min-w-[320px] lg:min-w-[420px] shrink-0 flex flex-col justify-between">
+            <div>
+              <h4 class="font-semibold font-[Saira] text-base sm:text-lg mb-2 sm:mb-3">
+                Simple, Powerful, Effective
+              </h4>
+              <p class="text-xs sm:text-sm leading-relaxed text-gray-700">
+                What stood out immediately was how easy it was to adapt. Within days, it became a core tool that improved output and reduced pressure.
+              </p>
+            </div>
+            <div class="flex items-center gap-3 sm:gap-4 mt-4 sm:mt-6">
+              <img
+                src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768803021/Frame_2147225674_dnme74.png"
+                alt=""
+                class="w-8 h-8 sm:w-10 sm:h-10 rounded-full"
+              />
+              <div>
+                <h5 class="font-medium text-xs sm:text-sm">Zainab M</h5>
+                <p class="text-[10px] sm:text-xs text-gray-500">Product Strategist, LoopTech</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div class="bg-white shadow-md p-4 sm:p-6 rounded-[12px] w-full min-w-[280px] sm:min-w-[320px] lg:min-w-[420px] shrink-0 flex flex-col justify-between">
+            <div>
+              <h4 class="font-semibold font-[Saira] text-base sm:text-lg mb-2 sm:mb-3">
+                Built for Real Workflows
+              </h4>
+              <p class="text-xs sm:text-sm leading-relaxed text-gray-700">
+                This fits naturally into how we already work. The learning curve was minimal, and productivity gains were clear across the team.
+              </p>
+            </div>
+            <div class="flex items-center gap-3 sm:gap-4 mt-4 sm:mt-6">
+              <img
+                src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768803021/Frame_2147225674_dnme74.png"
+                alt=""
+                class="w-8 h-8 sm:w-10 sm:h-10 rounded-full"
+              />
+              <div>
+                <h5 class="font-medium text-xs sm:text-sm">Fatima R</h5>
+                <p class="text-[10px] sm:text-xs text-gray-500">Growth Manager, Elevate Labs</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 5 -->
+          <div class="bg-white shadow-md p-4 sm:p-6 rounded-[12px] w-full min-w-[280px] sm:min-w-[320px] lg:min-w-[420px] shrink-0 flex flex-col justify-between">
+            <div>
+              <h4 class="font-semibold font-[Saira] text-base sm:text-lg mb-2 sm:mb-3">
+                Consistency You Can Rely On
+              </h4>
+              <p class="text-xs sm:text-sm leading-relaxed text-gray-700">
+                Performance stayed solid even as our workload increased. The system handled scale without friction or delays.
+              </p>
+            </div>
+            <div class="flex items-center gap-3 sm:gap-4 mt-4 sm:mt-6">
+              <img
+                src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768803021/Frame_2147225674_dnme74.png"
+                alt=""
+                class="w-8 h-8 sm:w-10 sm:h-10 rounded-full"
+              />
+              <div>
+                <h5 class="font-medium text-xs sm:text-sm">Samuel K</h5>
+                <p class="text-[10px] sm:text-xs text-gray-500">Technical Lead, CoreStack</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 6 -->
+          <div class="bg-white shadow-md p-4 sm:p-6 rounded-[12px] w-full min-w-[280px] sm:min-w-[320px] lg:min-w-[420px] shrink-0 flex flex-col justify-between">
+            <div>
+              <h4 class="font-semibold font-[Saira] text-base sm:text-lg mb-2 sm:mb-3">
+                Designed With Teams in Mind
+              </h4>
+              <p class="text-xs sm:text-sm leading-relaxed text-gray-700">
+                Adoption across departments was smooth. Everyone understood the flow quickly, which helped us align better as a team.
+              </p>
+            </div>
+            <div class="flex items-center gap-3 sm:gap-4 mt-4 sm:mt-6">
+              <img
+                src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768803021/Frame_2147225674_dnme74.png"
+                alt=""
+                class="w-8 h-8 sm:w-10 sm:h-10 rounded-full"
+              />
+              <div>
+                <h5 class="font-medium text-xs sm:text-sm">Ibrahim L</h5>
+                <p class="text-[10px] sm:text-xs text-gray-500">Team Coordinator, SyncWave</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Arrow -->
+      <button
+        id="nextBtn"
+        class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-md rounded-full w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center hover:bg-gray-100 transition-colors"
+      >
+        <span class="text-xl sm:text-2xl">›</span>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- Ready to Start Skill Swapping? -->
+  <div class="mt-12 sm:mt-16 lg:mt-20 text-center bg-[rgba(236,238,255,0.27)] py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
+    <h1 class="font-semibold font-[Saira] text-xl sm:text-2xl lg:text-[30px] mb-3">
+      Ready to Start Skill Swapping?
+    </h1>
+    <p class="text-sm sm:text-base lg:text-lg max-w-3xl mx-auto">
+      Build experience, collaborate with trusted peers, and get real work done by exchanging skills - not money. Join a growing community focused on learning, contribution, and professional growth.
+    </p>
+
+    <!-- Button Section -->
+    <div class="mt-8 sm:mt-12 lg:mt-20 flex flex-col sm:flex-row gap-4 justify-center">
+      <button class="shadow bg-blue-950 px-6 py-3 rounded-[10px] text-white font-semibold text-sm sm:text-base">
+        <a href="Signup.html">Get Started</a>
+      </button>
+      <button class="shadow px-6 py-3 rounded-[10px] bg-[rgba(138,148,224,0.4)] font-semibold text-sm sm:text-base">
+        <a href="webpage.html">Explore Skills</a>
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <div class="bg-[rgb(12,16,42)] py-8 sm:py-10 px-4 sm:px-6 lg:px-8">
+    <img 
+      class="mx-auto mb-6 sm:mb-10 h-12 sm:h-16" 
+      src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768850740/image_12_riqp9d.png" 
+      alt=""
+    />
+
+    <!-- Footer Grid -->
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12 mb-8 sm:mb-10">
+
+      <!-- Contact Info -->
+      <div class="text-white text-sm sm:text-base space-y-3 sm:space-y-4">
+        <p><i class="fa-regular fa-envelope"></i> customercare@skillswap.com</p>
+        <p><i class="fa-solid fa-phone"></i> +2348101234567</p>
+        <p><i class="fa-solid fa-map-pin"></i> Skillswap Hq, 45 Unity Crescent, Lagos, Nigeria</p>
+        <p><i class="fa-solid fa-user-group"></i> Monday - Friday: 9:00 AM - 5:00 PM (WAT)</p>
+      </div>
+
+      <!-- Product -->
+      <div class="text-white text-sm sm:text-base">
+        <h4 class="text-base sm:text-[20px] mb-3 sm:mb-4 font-semibold">Product</h4>
+        <div class="space-y-2 sm:space-y-3">
+          <p>How it Works</p>
+          <p>Explore Skills</p>
+          <p>Trust & Safety</p>
+          <p>Community Guideline</p>
+        </div>
+      </div>
+
+      <!-- Legal -->
+      <div class="text-white text-sm sm:text-base">
+        <h4 class="text-base sm:text-[20px] mb-3 sm:mb-4 font-semibold">Legal</h4>
+        <div class="space-y-2 sm:space-y-3">
+          <p>Terms of Service</p>
+          <p>Privacy Policy</p>
+        </div>
+      </div>
+
+      <!-- Our Company -->
+      <div class="text-white text-sm sm:text-base">
+        <h4 class="text-base sm:text-[20px] mb-3 sm:mb-4 font-semibold">Our Company</h4>
+        <div class="space-y-2 sm:space-y-3">
+          <p>About Us</p>
+          <p>Contact Us</p>
+          <p>Meet The Team</p>
+          <p>FAQs</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Social Media Icons -->
+    <div class="flex justify-center gap-3 sm:gap-5 mb-6 sm:mb-10">
+      <span class="rounded-full shadow bg-white p-2 hover:bg-gray-100 cursor-pointer transition-colors">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </span>
+      <span class="rounded-full shadow bg-white p-2 hover:bg-gray-100 cursor-pointer transition-colors">
+        <i class="fa-brands fa-twitter"></i>
+      </span>
+      <span class="rounded-full shadow bg-white p-2 hover:bg-gray-100 cursor-pointer transition-colors">
+        <i class="fa-brands fa-instagram"></i>
+      </span>
+      <span class="rounded-full shadow bg-white p-2 hover:bg-gray-100 cursor-pointer transition-colors">
+        <i class="fa-brands fa-facebook-f"></i>
+      </span>
+    </div>
+
+    <!-- Divider -->
+    <hr class="border-t border-gray-600 my-6 max-w-4xl mx-auto" />
+
+    <!-- Copyright -->
+    <div class="text-white text-center text-xs sm:text-sm">
+      <p>&copy; 2026 Skill Swap & Collaboration Hub. All rights reserved.</p>
+    </div>
+
+  </div>
+
+  <script src="Script/landingPage.js"></script>
+
+  
+
+</body>
+</html>
