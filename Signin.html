@@ -146,7 +146,6 @@
         }
 
         try {
-          // UPDATED URL: Changed from localhost to Render deployed API
           const res = await fetch(
             "https://skillswap-api-1upf.onrender.com/api/auth/login",
             {
@@ -161,11 +160,12 @@
           if (!res.ok) {
             alert(data.message || "Login failed");
           } else {
-            alert("Login successful!");
+            alert("Signin successful!");
             localStorage.setItem("token", data.token); // save JWT
             form.reset();
-            // optionally redirect user to dashboard
-            // window.location.href = "/dashboard.html";
+
+            // Redirect to the applicants profile page
+            window.location.href = "view_applicants_profile_frontend.html";
           }
         } catch (err) {
           console.error("Error:", err);
