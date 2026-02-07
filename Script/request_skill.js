@@ -1,10 +1,9 @@
+let milestoneCount = 2;
 
-        let milestoneCount = 2;
-
-        function addMilestone() {
-            milestoneCount++;
-            const container = document.getElementById('milestonesContainer');
-            const milestoneHTML = `
+function addMilestone() {
+  milestoneCount++;
+  const container = document.getElementById("milestonesContainer");
+  const milestoneHTML = `
                 <div class="milestone-item mb-6 p-4 border border-gray-200 rounded-lg relative">
                     <button onclick="removeMilestone(this)" class="absolute top-4 right-4 text-gray-400 hover:text-red-600">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -37,44 +36,45 @@
                     </div>
                 </div>
             `;
-            container.insertAdjacentHTML('beforeend', milestoneHTML);
-        }
+  container.insertAdjacentHTML("beforeend", milestoneHTML);
+}
 
-        function removeMilestone(button) {
-            const milestoneItem = button.closest('.milestone-item');
-            milestoneItem.remove();
-            
-            // Renumber remaining milestones
-            const milestones = document.querySelectorAll('.milestone-item');
-            milestones.forEach((milestone, index) => {
-                const heading = milestone.querySelector('h3');
-                heading.textContent = `Milestone ${index + 1}`;
-            });
-            
-            milestoneCount = milestones.length;
-        }
+function removeMilestone(button) {
+  const milestoneItem = button.closest(".milestone-item");
+  milestoneItem.remove();
 
-        function submitRequest() {
-            const projectTitle = document.getElementById('projectTitle').value;
-            const projectType = document.getElementById('projectType').value;
-            
-            if (!projectTitle) {
-                alert('Please enter a project title');
-                return;
-            }
-            
-            if (!projectType) {
-                alert('Please select a project type');
-                return;
-            }
-            
-            alert('Skill Swap Request submitted successfully!');
-            // Here you would normally send the data to a server
-        }
+  // Renumber remaining milestones
+  const milestones = document.querySelectorAll(".milestone-item");
+  milestones.forEach((milestone, index) => {
+    const heading = milestone.querySelector("h3");
+    heading.textContent = `Milestone ${index + 1}`;
+  });
 
-        function cancelRequest() {
-            if (confirm('Are you sure you want to cancel? All entered data will be lost.')) {
-                window.history.back();
-            }
-        }
-   
+  milestoneCount = milestones.length;
+}
+
+function submitRequest() {
+  const projectTitle = document.getElementById("projectTitle").value;
+  const projectType = document.getElementById("projectType").value;
+
+  if (!projectTitle) {
+    alert("Please enter a project title");
+    return;
+  }
+
+  if (!projectType) {
+    alert("Please select a project type");
+    return;
+  }
+
+  alert("Skill Swap Request submitted successfully!");
+  // Here you would normally send the data to a server
+}
+
+function cancelRequest() {
+  if (
+    confirm("Are you sure you want to cancel? All entered data will be lost.")
+  ) {
+    window.history.back();
+  }
+}
