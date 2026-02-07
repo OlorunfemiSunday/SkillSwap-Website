@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Helper function to handle internal notifications
   function showInternalNotification(message, type = "info") {
-    // Create or find notification element
     let notifyDiv = document.getElementById("internal-notification");
 
     if (!notifyDiv) {
@@ -12,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
       document.body.appendChild(notifyDiv);
     }
 
-    // Set styles based on type
     const styles = {
       info: "bg-blue-100 text-blue-800 border border-blue-200",
       success: "bg-emerald-100 text-emerald-800 border border-emerald-200",
@@ -22,46 +19,40 @@ document.addEventListener("DOMContentLoaded", function () {
     notifyDiv.textContent = message;
     notifyDiv.className = `fixed top-6 right-6 z-50 px-6 py-3 rounded-lg shadow-xl font-medium transition-all duration-300 transform translate-y-0 opacity-100 ${styles[type]}`;
 
-    // Hide after 3 seconds
     setTimeout(() => {
       notifyDiv.classList.replace("opacity-100", "opacity-0");
       notifyDiv.classList.replace("translate-y-0", "translate-y-[-20px]");
     }, 3000);
   }
 
-  // Message button click handler
-  const messageBtn = document.querySelector("button:first-of-type");
+  // Use IDs for better reliability
+  const messageBtn = document.getElementById("messageBtn");
+  const acceptBtn = document.getElementById("acceptBtn");
+  const rejectBtn = document.getElementById("rejectBtn");
+
   if (messageBtn) {
-    messageBtn.addEventListener("click", function () {
+    messageBtn.addEventListener("click", () => {
       showInternalNotification("Message feature coming soon!", "info");
     });
   }
 
-  // Accept button handler
-  const acceptBtn = document.querySelector(".bg-indigo-600.px-8");
   if (acceptBtn) {
-    acceptBtn.addEventListener("click", function () {
+    acceptBtn.addEventListener("click", () => {
       showInternalNotification("Profile accepted!", "success");
-
-      // UI Update
       acceptBtn.textContent = "Accepted";
       acceptBtn.disabled = true;
-      acceptBtn.classList.replace("bg-indigo-600", "bg-emerald-600");
+      acceptBtn.className =
+        "bg-emerald-600 text-white px-8 py-2 rounded-lg opacity-80 cursor-not-allowed";
     });
   }
 
-  // Reject button handler
-  const rejectBtn = document.querySelector(".bg-white.border");
   if (rejectBtn) {
-    rejectBtn.addEventListener("click", function () {
-      // Note: confirm() is removed as requested.
-      // In a production app, you would trigger a custom modal here.
+    rejectBtn.addEventListener("click", () => {
       showInternalNotification("Profile rejected!", "error");
-
-      // UI Update
       rejectBtn.textContent = "Rejected";
       rejectBtn.disabled = true;
-      rejectBtn.classList.add("opacity-50", "cursor-not-allowed");
+      rejectBtn.className =
+        "bg-gray-100 text-gray-400 border px-8 py-2 rounded-lg cursor-not-allowed";
     });
   }
 });
