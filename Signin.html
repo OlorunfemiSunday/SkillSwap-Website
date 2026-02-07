@@ -86,6 +86,12 @@
                   </p>
                 </div>
 
+                <!-- Internal Notification Container -->
+                <div
+                  id="notification"
+                  class="hidden text-sm text-center mb-4 p-3 rounded-md font-medium"
+                ></div>
+
                 <!-- Username -->
                 <div class="mb-4">
                   <label class="text-sm font-medium text-gray-500">
@@ -120,7 +126,8 @@
                 <!-- Button -->
                 <button
                   type="submit"
-                  class="w-full h-12 bg-blue-950 text-white rounded-md font-medium hover:bg-blue-900 transition"
+                  id="submitBtn"
+                  class="w-full h-12 bg-blue-950 text-white rounded-md font-medium hover:bg-blue-900 transition disabled:bg-gray-400 disabled:cursor-not-allowed"
                 >
                   Continue
                 </button>
@@ -133,19 +140,47 @@
 
     <script>
       const form = document.getElementById("loginForm");
+      const notification = document.getElementById("notification");
+      const submitBtn = document.getElementById("submitBtn");
+
+      function showNotification(message, type = "error") {
+        notification.textContent = message;
+        notification.classList.remove(
+          "hidden",
+          "bg-red-100",
+          "text-red-700",
+          "bg-emerald-100",
+          "text-emerald-700",
+        );
+
+        if (type === "success") {
+          notification.classList.add("bg-emerald-100", "text-emerald-700");
+        } else {
+          notification.classList.add("bg-red-100", "text-red-700");
+        }
+
+        notification.classList.remove("hidden");
+      }
 
       form.addEventListener("submit", async (e) => {
         e.preventDefault();
+
+        // Reset notification
+        notification.classList.add("hidden");
 
         const email = document.getElementById("email").value.trim();
         const password = document.getElementById("password").value;
 
         if (!email || !password) {
-          alert("Please enter both email and password");
+          showNotification("Please enter both email and password");
           return;
         }
 
         try {
+          // UI Loading State
+          submitBtn.disabled = true;
+          submitBtn.textContent = "Signing in...";
+
           const res = await fetch(
             "https://skillswap-api-1upf.onrender.com/api/auth/login",
             {
@@ -158,18 +193,25 @@
           const data = await res.json();
 
           if (!res.ok) {
-            alert(data.message || "Login failed");
+            showNotification(data.message || "Login failed");
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Continue";
           } else {
-            alert("Signin successful!");
-            localStorage.setItem("token", data.token); // save JWT
+            showNotification("Signin successful! Redirecting...", "success");
+            localStorage.setItem("token", data.token);
+
             form.reset();
 
-            // Redirect to the applicants profile page
-            window.location.href = "view_applicants_profile_frontend.html";
+            // Redirect after a short delay
+            setTimeout(() => {
+              window.location.href = "view_applicants_profile_frontend.html";
+            }, 1200);
           }
         } catch (err) {
           console.error("Error:", err);
-          alert("Something went wrong, try again later.");
+          showNotification("Connection error. Please try again later.");
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Continue";
         }
       });
     </script>
