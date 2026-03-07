@@ -26,21 +26,20 @@ document.addEventListener("DOMContentLoaded", function () {
       updateBtn.textContent = "Updating...";
       updateBtn.disabled = true;
 
-      // Collect Skills from the UI tags
+      // Collect Skills from the UI tags (extracting only the text, not the 'x' button)
       const skills = Array.from(selectedSkillsContainer.querySelectorAll('div'))
-        .map(tag => tag.textContent.trim().replace(/\s+/g, ' '));
+        .map(tag => tag.firstChild.textContent.trim());
 
-      // Collect all form data
+      // Collect all form data using specific IDs for reliability
       const data = {
-        name: document.querySelector('input[placeholder="Enter your full name"]').value,
-        email: document.querySelector('input[type="email"]').value,
-        phone: document.querySelector('input[type="tel"]').value,
-        gender: document.querySelector("select").value,
-        bio: document.querySelector("textarea").value,
-        // Adding the missing fields that caused the 500 error
-        role: document.querySelector('select:nth-of-type(2)')?.value || "", 
-        industry: document.querySelector('select:nth-of-type(3)')?.value || "",
-        location: document.querySelector('input[placeholder="Senior, Lagos State"]')?.value || "",
+        name: document.getElementById("fullName").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        gender: document.getElementById("gender").value,
+        bio: document.getElementById("bio").value,
+        role: document.getElementById("role").value,
+        industry: document.getElementById("industry").value,
+        location: document.getElementById("location").value,
         skills: skills
       };
 
@@ -61,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
           if (feedback) {
             feedback.textContent = "Profile updated successfully!";
             feedback.className = "text-sm text-center mb-4 font-medium text-emerald-600 block";
+            feedback.classList.remove("hidden");
           }
           if (exploreBtn) {
             exploreBtn.classList.remove("hidden");
@@ -82,6 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (feedback) {
           feedback.textContent = "Failed to update profile. Please try again.";
           feedback.className = "text-sm text-center mb-4 font-medium text-red-600 block";
+          feedback.classList.remove("hidden");
         }
       }
     });
